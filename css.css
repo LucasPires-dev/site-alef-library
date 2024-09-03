@@ -1,0 +1,311 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* FIm do CSS de reset */
+
+
+/* CSS próprio */
+
+*{
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #008000;
+    font-family: "Bungee", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    padding: 16px 0;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    height: 2.5em;
+    margin-right: 8px;
+}
+
+header > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header h1 {
+    font-size: 3em;
+
+}
+
+.menu-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 8px 0;
+    border-bottom: 5px solid transparent;
+}
+
+.menu-nav ul li:hover{
+    position: relative;
+    border-bottom: 5px solid white;
+}
+
+.menu-nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.botao-menu {
+    display: none;
+}
+
+.botao-menu span {
+    background-color: #fff;
+    height: 3px;
+    display: block;
+    width: 32px;
+    margin-bottom: 5px;
+}
+
+section {
+    margin: 56px 0;
+}
+
+section h2 {
+    font-family: "Bungee", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6em;
+    margin-bottom: 1.5rem;
+    border-bottom: 5px solid #56A144;
+    padding-bottom: 16px;
+    color: #56A144;
+    font-style: italic;
+}
+
+section#sobre {
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+    grid-template-rows: auto;
+    column-gap: 2%;
+}
+
+section#sobre h2 {
+    grid-column: 1 / span 2;
+}
+
+section#sobre img {
+ width: 100%;
+}
+
+section#sobre div p {
+    margin-bottom: 8px;
+    font-size: 1.15em;
+}
+
+.div-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2%;
+    row-gap: 5%;
+}
+
+.img-produto {
+    display: block;
+    width: 100%;
+    background-color: #ccc;
+}
+
+.img-produto img{
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.produto {
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.produto h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.produto p {
+    font-size: 1.1em;
+    margin-bottom: .8em;
+}
+
+.produto strong {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.produto button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #56A144;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 16px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+
+footer {
+    background-color: #008000;
+    padding: 16px 5%;
+    font-family: "Roboto", system-ui;
+}
+
+@media screen and (min-width:641px) and (max-width:1023px) {
+    body > .container,
+    header > .container {
+        max-width: 90%;
+    }
+    section#sobre {
+        display: block;
+    }
+
+    .div-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section#sobre img {
+        margin-bottom: 2em;
+       }
+}
+
+@media screen and (min-width: 1024px) {
+    body > .container,
+    header > .container {
+        max-width: 90%;
+}
+}
+
+@media screen and (max-width:640px) {
+    header {
+        padding-bottom: 0;
+    }
+    header .container {
+        display: block;
+    }
+    body > .container {
+        max-width: 90%;
+    }
+    section#sobre {
+        display: block;
+    }
+
+    .div-produtos {
+        grid-template-columns: 1fr;
+        row-gap: 1%;
+    }
+
+    section#sobre img {
+        margin-bottom: 2em;
+       }
+
+    .menu-nav {
+        /* display: none; */
+        background-color: #56A144;
+        padding: 16px 5%;
+        text-align: center;
+    }
+
+    .logo, .botao-menu {
+        display: inline-block;
+    }
+
+    .cabecario-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 16px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header .logo img {
+        height: 2em;
+    }
+}
+
+
+
+
+
