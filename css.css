@@ -277,7 +277,7 @@ footer {
        }
 
     .menu-nav {
-        /* display: none; */
+        display: nongie;
         background-color: #56A144;
         padding: 16px 5%;
         text-align: center;
